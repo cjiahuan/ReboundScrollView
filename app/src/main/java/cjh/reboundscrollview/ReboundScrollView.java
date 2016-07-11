@@ -28,8 +28,6 @@ public class ReboundScrollView extends ScrollView {
     private boolean havaMoved;
 
     private int changeY;
-    private int changeDistance;
-    private int originalY;
 
     private Rect originalRect = new Rect();
 
@@ -51,7 +49,6 @@ public class ReboundScrollView extends ScrollView {
     @Override
     protected void onOverScrolled(int scrollX, int scrollY, boolean clampedX,
                                   boolean clampedY) {
-        changeDistance = scrollY;
         if (listener != null) {
             listener.onMyScrollEvent(-1, scrollY);
         }
@@ -89,9 +86,6 @@ public class ReboundScrollView extends ScrollView {
      */
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (ev.getRawY() < originalY - changeDistance) {
-            return false;
-        }
 
         if (childView == null) {
             return super.dispatchTouchEvent(ev);
