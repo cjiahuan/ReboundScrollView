@@ -3,6 +3,7 @@ package cjh.reboundscrollview;
 import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
@@ -13,11 +14,13 @@ import android.widget.ScrollView;
  */
 public class ReboundScrollView extends ScrollView {
 
+    private static final String TAG = "ReboundScrollView";
+
     private static final float MOVE_DELAY = 0.3f;
     private static final int ANIM_TIME = 300;
 
     public interface MyScrollListener {
-        public void onMyScrollEvent(int action, float y);
+        void onMyScrollEvent(int action, float y);
     }
 
     private MyScrollListener listener;
@@ -36,9 +39,8 @@ public class ReboundScrollView extends ScrollView {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        if (getChildCount() > 0) {
-            childView = getChildAt(0);
-        }
+        Log.d(TAG, "onFinishInflate");
+
     }
 
     @Override
@@ -58,7 +60,9 @@ public class ReboundScrollView extends ScrollView {
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-
+        Log.d(TAG, "onlayout");
+        if (getChildCount() > 0)
+            childView = getChildAt(0);
         if (childView == null)
             return;
 
