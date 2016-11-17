@@ -2,7 +2,7 @@
 仿IOS ScrollView 支持上拉下拉拉出手机屏幕，回弹
 
 ### ScreenShots
-
+![image](https://github.com/cjhandroid/ReboundScrollView/blob/master/app/src/main/assets/ezgif.com-video-to-gif.gif)   
 ### v1.0.0
 
 ReboundScrollView 基本功能完成：IOS 回弹，但实际运用中这种单纯的回弹是不多的，一般会需要重新订制，建议把源码下下来。
