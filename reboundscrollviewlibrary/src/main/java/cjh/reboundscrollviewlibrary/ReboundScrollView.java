@@ -1,4 +1,4 @@
-package cjh.reboundscrollview;
+package cjh.reboundscrollviewlibrary;
 
 import android.content.Context;
 import android.graphics.Rect;

@@ -6,6 +6,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import cjh.reboundscrollviewlibrary.ReboundScrollView;
+
 public class NewReboundActivity extends AppCompatActivity {
 
     private int[] resId = new int[]{
