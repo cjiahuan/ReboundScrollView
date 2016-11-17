@@ -60,3 +60,6 @@ allprojects {
         setContentView(reboundScrollView);
     }
 ```
+
+### Kotlin 
+这是一位使用 Kotlin 开发的网友，根据需求将代码改成了 Kotlin 的语言，<a href="https://github.com/cjhandroid/ReboundScrollView/issues/1" target="blank">将 ReboundScrollView 修改成 Kotlin 语言了<a>
